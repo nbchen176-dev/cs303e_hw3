@@ -23,19 +23,16 @@ guesses = 1
 while user_num != secret_num and user_num != 0:
     if user_num < secret_num and 0 <= user_num <= 1000:
         print("Your guess is too low.")
-        guesses += 1
-        user_num = int(input("Please enter your guess: "))
     elif user_num > secret_num and 0 <= user_num <= 1000:
         print("Your guess is too high.")
-        guesses += 1
-        user_num = int(input("Please enter your guess: "))
     else:
         print("Your guess must be between 1 to 1000.")
-        guesses += 1
-        user_num = int(input("Please enter your guess: "))
+    guesses += 1
+    user_num = int(input("Please enter your guess: "))
 
 if user_num == 0:
     print("Goodbye!")
 else:
     print("That's correct! You win!")
+
     print(f"You guessed my number in {guesses} guesses.")
